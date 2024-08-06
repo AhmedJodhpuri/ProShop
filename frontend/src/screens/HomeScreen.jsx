@@ -7,9 +7,14 @@ const HomeScreen = () => {
   const [products, setProducts] = useState([]);
   
   useEffect(()=>{
-    const fetchProducts = async()=>{
-      const {data} = await axios.get('/api/products');
-      setProducts(data);
+    const fetchProducts = async () => {
+      try {
+        const { data } = await axios.get('/api/products');
+        setProducts(data);
+      } catch (err) {
+        console.log('Failed to fetch products.');
+        console.error(err);
+      }
     };
     fetchProducts();
   }, []);
