@@ -1,4 +1,4 @@
-import {FaStar, FaStarHalf, FaRegStar, FaStarHalfAlt } from 'react-icons/fa'
+import {FaStar, FaRegStar, FaStarHalfAlt } from 'react-icons/fa'
 
 import React from 'react'
 
